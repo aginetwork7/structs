@@ -3,6 +3,7 @@ package structs
 
 import (
 	"fmt"
+
 	"reflect"
 )
 
