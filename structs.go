@@ -520,13 +520,7 @@ func (s *Struct) nested(val reflect.Value) interface{} {
 		n.TagName = s.TagName
 		m := n.Map()
 
-		// do not add the converted value if there are no exported fields, ie:
-		// time.Time
-		if len(m) == 0 {
-			finalVal = val.Interface()
-		} else {
-			finalVal = m
-		}
+		finalVal = m
 	case reflect.Map:
 		// get the element type of the map
 		mapElem := val.Type()
